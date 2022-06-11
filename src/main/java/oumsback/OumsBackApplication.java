@@ -1,11 +1,10 @@
-package oumsback.oumsback;
+package oumsback;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-@SpringBootApplication
-@EnableSwagger2
+@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 public class OumsBackApplication {
 
     public static void main(String[] args) {
