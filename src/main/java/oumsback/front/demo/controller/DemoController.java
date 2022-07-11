@@ -1,4 +1,4 @@
-package oumsback.common.controller;
+package oumsback.front.demo.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(value = "/api", tags = {"DemoApi"})
 public class DemoController {
 
-    @ApiOperation(value = "API 연결 테스트", notes = "API 연결 테스트")
-    @GetMapping(value = "/demo")
-    public String getApi() {
-        return "hello";
-    }
+	@ApiOperation(value = "API 연결 테스트", notes = "API 연결 테스트")
+	@GetMapping(value = "/demo")
+	public String getApi() {
+		return "hello";
+	}
 }
