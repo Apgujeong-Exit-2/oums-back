@@ -5,4 +5,5 @@ member:
   sns:
     kakao:
       rest-api-key: 6e8730be61ae77711d830782040578a3
-      redirect-uri: http://localhost:3000/kakao/login/redirect
+#      redirect-uri: http://localhost:3000/kakao/login/redirect
+      redirect-uri: http://localhost:8080/api/kakao/login/redirect

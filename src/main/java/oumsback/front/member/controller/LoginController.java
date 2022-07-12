@@ -7,17 +7,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import oumsback.front.member.aggregator.LoginAggregator;
 
-@RestController
 @RequiredArgsConstructor
+@RestController
 @RequestMapping("/api")
 @Api(value = "/api", tags = {"Login Api"})
 public class LoginController {
-	private LoginAggregator loginAggregator;
+
+	private final LoginAggregator loginAggregator;
 
 	@GetMapping(value = "/kakao/login/redirect")
-	public String getKakaoCallback(String code) {
+	public void getKakaoCallback(String code) {
 		System.out.println("code : " + code);
 
-		return "success";
+		String accessToken = loginAggregator.getKakaoLogin(code);
+		System.out.println("accessToken : " + accessToken);
+
+		loginAggregator.getUserInfo(accessToken);
 	}
 }

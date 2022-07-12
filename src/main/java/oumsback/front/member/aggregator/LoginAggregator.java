@@ -4,9 +4,17 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import oumsback.core.member.service.LoginService;
 
-@Service
 @RequiredArgsConstructor
+@Service
 public class LoginAggregator {
-	private LoginService loginService;
+	private final LoginService loginService;
 
+	public String getKakaoLogin(String code) {
+		String accessToken = loginService.getKakaoAccessToken(code);
+		return accessToken;
+	}
+
+	public void getUserInfo(String token) {
+		loginService.getUserInfo(token);
+	}
 }
