@@ -1,4 +1,4 @@
-package oumsback.front.party.controller;
+package oumsback.front.ott.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

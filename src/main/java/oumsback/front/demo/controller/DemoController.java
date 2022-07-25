@@ -16,7 +16,7 @@ public class DemoController {
 	@ApiOperation(value = "API 연결 테스트", notes = "API 연결 테스트")
 	@GetMapping(value = "/demo")
 	public String getApi() {
-		return "hello";
+		return "demo get return data";
 	}
 
 	@ApiOperation(value = "API 연결 테스트 (POST)", notes = "API 연결 테스트 (POST)")
